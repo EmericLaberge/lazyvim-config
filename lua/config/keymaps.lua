@@ -107,6 +107,9 @@ end)
 keymap.set("n", "<leader>l", function()
   vim.cmd("lua require('lspsaga.diagnostic').show_line_diagnostics()")
 end)
+keymap.set("n", "<leader>ld", function()
+  vim.cmd("lua require('lspsaga.diagnostic').show_line_diagnostics()")
+end)
 -- Key mapping to toggle lsp_lines
 keymap.set(
   "n", -- normal mode
@@ -114,6 +117,13 @@ keymap.set(
   require("lsp_lines").toggle, -- toggle lsp_lines
   { desc = "Toggle lsp_lines" }
 )
+keymap.set(
+  "n",
+  "<leader>ld",
+  "<cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>",
+  { desc = "Show line diagnostics" }
+)
+vim.keymap.set("n", "<leader>ld", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
 
 keymap.set({ "n", "v" }, "<leader>]", ":Gen<CR>")
 vim.api.nvim_set_keymap("n", "fw", ":HopWord<CR>", { noremap = true })

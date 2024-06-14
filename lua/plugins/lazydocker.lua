@@ -1,7 +1,9 @@
--- lua/plugins/lazydocker.lua
+-- Lazy
 return {
-  "kdheepak/lazygit.nvim",
-  config = function()
-    vim.api.nvim_set_keymap('n', '<leader>ld', ':LazyGit<CR>', { noremap = true, silent = true })
-  end
+  "crnvl96/lazydocker.nvim",
+  event = "VeryLazy",
+  opts = {}, -- automatically calls `require("lazydocker").setup()`
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+  },
 }
