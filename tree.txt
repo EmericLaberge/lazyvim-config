@@ -1,0 +1,18 @@
+.
+├── init.lua
+├── lazy-lock.json
+├── lazyvim.json
+├── LICENSE
+├── lua
+│   ├── config
+│   │   ├── autocmds.lua
+│   │   ├── keymaps.lua
+│   │   ├── lazy.lua
+│   │   └── options.lua
+│   └── plugins
+│       └── example.lua
+├── README.md
+├── stylua.toml
+└── tree.txt
+
+4 directories, 12 files
