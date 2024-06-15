@@ -5,7 +5,6 @@ return {
       filters = {
         dotfiles = true,
       },
-      lazy = false,
     })
   end,
   enabled = true,

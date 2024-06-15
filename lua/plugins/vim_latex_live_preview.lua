@@ -5,5 +5,5 @@ return {
     vim.g.livepreview_previewer = "sioyek"
     vim.g.livepreview_engine = "latexmk"
   end,
+  enabled = false,
 }
-
