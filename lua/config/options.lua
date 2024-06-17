@@ -25,3 +25,4 @@ opt.clipboard = "unnamedplus"
 opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
+opt.termguicolors = true

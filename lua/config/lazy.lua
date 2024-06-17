@@ -45,10 +45,24 @@ require("lazy").setup({
         "nerdtree",
         "netrw",
         "netrwplugin",
-        "neotree",
-        "neo-tree",
         "flash",
       },
     },
   },
 })
+vim.opt.termguicolors = true
+vim.cmd("colorscheme tokyonight-storm")
+-- Explicitly set the background color for NERDTree and other UI components
+vim.cmd([[
+  highlight NERDTreeDir guibg=NONE
+  highlight NERDTreeDirSlash guibg=NONE
+  highlight NERDTreeOpenable guibg=NONE
+  highlight NERDTreeClosable guibg=NONE
+  highlight NERDTreeFile guibg=NONE
+  highlight NERDTreeExecFile guibg=NONE
+  highlight NERDTreeUp guibg=NONE
+  highlight NERDTreeCWD guibg=NONE
+  highlight NERDTreeHelp guibg=NONE
+  highlight NERDTreeToggleOn guibg=NONE
+  highlight NERDTreeToggleOff guibg=NONE
+]])

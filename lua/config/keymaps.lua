@@ -37,10 +37,27 @@ keymap.set("n", "<leader>gg", ":LazyGit<CR>")
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
-keymap.set("n", "<leader>tf", ":NvimTreeFocus<CR>") -- focus file explorer
-keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>") -- toggle file explorer
-keymap.set("n", "<leader>ts", ":NvimTreeFindFile<CR>") -- open file explorer to current file
-keymap.set("n", "<leader>tc", ":NvimTreeCollapse<CR>") -- collapse file tree
+-- keymap.set("n", "<leader>tf", ":NvimTreeFocus<CR>") -- focus file explorer
+-- keymap.set("n", "<leader>tt", ":NvimTreeToggle<CR>") -- toggle file explorer
+-- keymap.set("n", "<leader>ts", ":NvimTreeFindFile<CR>") -- open file explorer to current file
+-- keymap.set("n", "<leader>tc", ":NvimTreeCollapse<CR>") -- collapse file tree
+
+-- neotree
+keymap.set("n", "<leader>tf", ":Neotree focus<CR>") -- focus file explorer
+--make a function to toggle neotree using its show and close functions
+function ToggleNeotree()
+  if vim.g.neotree == 1 then
+    vim.g.neotree = 0
+    vim.cmd("Neotree close")
+  else
+    vim.g.neotree = 1
+    vim.cmd("Neotree")
+  end
+end
+
+keymap.set("n", "<leader>tt", ":lua ToggleNeotree()<CR>") -- toggle file explorer
+keymap.set("n", "<leader>ts", ":NeoTreeFindFile<CR>") -- open file explorer to current file
+keymap.set("n", "<leader>tc", ":NeoTreeClose<CR>") -- close file tree
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
