@@ -15,6 +15,7 @@ require("lazy").setup({
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.dap" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
@@ -45,24 +46,7 @@ require("lazy").setup({
         "nerdtree",
         "netrw",
         "netrwplugin",
-        "flash",
       },
     },
   },
 })
-vim.opt.termguicolors = true
-vim.cmd("colorscheme tokyonight-storm")
--- Explicitly set the background color for NERDTree and other UI components
-vim.cmd([[
-  highlight NERDTreeDir guibg=NONE
-  highlight NERDTreeDirSlash guibg=NONE
-  highlight NERDTreeOpenable guibg=NONE
-  highlight NERDTreeClosable guibg=NONE
-  highlight NERDTreeFile guibg=NONE
-  highlight NERDTreeExecFile guibg=NONE
-  highlight NERDTreeUp guibg=NONE
-  highlight NERDTreeCWD guibg=NONE
-  highlight NERDTreeHelp guibg=NONE
-  highlight NERDTreeToggleOn guibg=NONE
-  highlight NERDTreeToggleOff guibg=NONE
-]])
